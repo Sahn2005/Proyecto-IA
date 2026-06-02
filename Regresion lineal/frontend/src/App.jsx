@@ -25,31 +25,9 @@ import {
   HelpCircle,
   Code
 } from 'lucide-react';
-import {
-  Chart as ChartJS,
-  CategoryScale,
-  LinearScale,
-  BarElement,
-  PointElement,
-  LineElement,
-  Title,
-  Tooltip,
-  Legend,
-  Filler
-} from 'chart.js';
+import 'chart.js/auto';
 import { Bar, Scatter } from 'react-chartjs-2';
 
-ChartJS.register(
-  CategoryScale,
-  LinearScale,
-  BarElement,
-  PointElement,
-  LineElement,
-  Title,
-  Tooltip,
-  Legend,
-  Filler
-);
 
 const getApiBase = () => {
   if (typeof window !== 'undefined') {
@@ -412,7 +390,7 @@ export default function App() {
       {
         label: 'Ajuste Perfecto (Ideal)',
         data: [{ x: 0, y: 0 }, { x: maxVal, y: maxVal }],
-        type: 'line',
+        showLine: true,
         borderColor: 'rgba(239, 68, 68, 0.65)',
         borderWidth: 2,
         borderDash: [5, 5],
