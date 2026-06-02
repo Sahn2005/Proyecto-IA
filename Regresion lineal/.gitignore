@@ -1,0 +1,21 @@
+# Dependency directories
+node_modules/
+frontend/node_modules/
+
+# Build outputs
+dist/
+frontend/dist/
+
+# Python caches
+__pycache__/
+backend/__pycache__/
+*.pyc
+
+# Local model storage
+backend/model.joblib
+
+# Logs and OS files
+*.log
+frontend/npm_log.txt
+.DS_Store
+Thumbs.db
